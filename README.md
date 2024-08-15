@@ -1,2 +1,2 @@
 # Crop-Prediction
-a website with predicts the crop and estimation of crop
+A website that recommends the most suitable crop for a specific location by analyzing the state, soil type, and environmental conditions, while also providing an estimated crop yield.
