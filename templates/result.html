@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop and ROI Division</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/result.css') }}">
+</head>
+<body>
+    <div class="header">
+        <h1>Crop and ROI</h1>
+    </div>
+
+    <div class="container">
+        <div class="section" id="crop-section">
+            <h2>Crop</h2>
+            <!-- Output from backend will be placed here -->
+            <p id="crop-output">{{ prediction }}</p>
+        </div>
+
+        <div class="section" id="roi-section">
+            <h2>ROI</h2>
+            <!-- Output from backend will be placed here -->
+            <p id="roi-output">{{ pricePrediction }}</p>
+        </div>
+    </div>
+
+    <div id="output">
+        <h2>Final Output</h2>
+        <!-- Final combined output from backend will be displayed here -->
+        <p id="final-output">Crop: {{ prediction }}, Price Prediction: ₹{{ pricePrediction }}</p>
+    </div>
+</body>
+</html>

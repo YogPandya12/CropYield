@@ -1,0 +1,134 @@
+﻿/* Reset some basic elements */
+body, h1, h2, h3, h4, p, ul {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    background-color: #fff;
+    padding: 20px 0;
+    border-bottom: 3px solid #28a745;
+}
+
+    .header h1 {
+        color: #28a745;
+        text-align: center;
+    }
+
+    .header nav ul {
+        list-style: none;
+        text-align: center;
+    }
+
+        .header nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+            .header nav ul li a {
+                text-decoration: none;
+                color: #333;
+                font-weight: 500;
+                transition: color 0.3s;
+            }
+
+                .header nav ul li a:hover {
+                    color: #28a745;
+                }
+
+/* Hero Section */
+.hero {
+    background-color: #28a745;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+    .hero h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+        margin-bottom: 40px;
+    }
+
+    .hero .btn {
+        background-color: #fff;
+        color: #28a745;
+        padding: 15px 30px;
+        text-decoration: none;
+        font-weight: 600;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+        .hero .btn:hover {
+            background-color: #f1f1f1;
+        }
+
+/* Features Section */
+.features {
+    background-color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+    .features h3 {
+        color: #28a745;
+        margin-bottom: 40px;
+    }
+
+.feature-grid {
+    display: flex;
+    justify-content: space-around;
+}
+
+.feature-item {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    transition: box-shadow 0.3s;
+}
+
+    .feature-item:hover {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature-item h4 {
+        color: #28a745;
+        margin-bottom: 15px;
+    }
+
+    .feature-item p {
+        color: #555;
+    }
+
+/* Footer */
+.footer {
+    background-color: #28a745;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+    .footer p {
+        margin: 0;
+    }

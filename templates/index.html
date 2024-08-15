@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop & Plantation Analysis</title>
+    <link rel="stylesheet" href="static/css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Crop & Plantation Analysis</h1>
+
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('predict') }}">Analyze</a></li>
+                <li><a href="{{ url_for('about_us') }}">About us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="container">
+            <h2>Maximize Your Crop Yield with Data-Driven Insights</h2>
+            <p>Utilize our advanced analysis tool to optimize your farming practices and ensure the best return on investment.</p>
+            <a href="{{ url_for('predict') }}" class="btn">Analyze now!</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h3>Features</h3>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <h4>Soil Analysis</h4>
+                    <p>Analyze soil type, pH levels, Temperature, Humidity and more to find the best crops for your land.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <h4>Crop and ROI</h4>
+                    <p>Uses input data to give most suitable Crop and also gives ROI value </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Crop & Plantation Analysis. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+

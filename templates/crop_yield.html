@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Crop & Plantation Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/crop_yield.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Crop & Plantation Analysis</h1>
+        <form id="analysisForm" action="/predict" method="POST">
+            <label for="soilType">Soil Type:</label>
+            <select id="soilType" name="soilType" required>
+                <option value="" disabled selected>Select type of Soil</option>
+                <option value="Sandy soil">Sandy Soil</option>
+                <option value="Red soil">Red Soil</option>
+                <option value="Laterite soil">Laterite Soil</option>
+                <option value="Clayey soils">Clayey soils</option>
+                <option value="Sandy loam">Sandy loams</option>
+                <option value="Alluvial soil">Alluvial soil</option>
+                <option value="Sandy Clay loam">Sandy Clay loam</option>
+                <option value="Black soil">Black Soil</option>
+                <option value="Regur soil">Regur soil</option>
+                <option value="Inceptisols">Inceptisols</option>
+                <option value="Loamy soil">Loamy soil</option>
+                <option value="Delta alluvium">Delta alluvium</option>
+                <option value="Mountain soil">Mountain soil</option>
+            </select>
+
+            <label for="Rainfall">Rainfall :</label>
+            <input type="number" id="rainfall" name="Rainfall" min="0" max="140" step="1" required>
+
+            <label for="states">Select State:</label>
+            <select id="states" name="states" required>
+                <option value="" disabled selected>Select your state</option>
+                <option value="Andaman and Nicobar">Andaman and Nicobar Islands</option>
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Assam">Assam</option>
+                <option value="Chhattisgarh">Chhattisgarh</option>
+                <option value="Goa">Goa</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Haryana">Haryana</option>
+                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Madhya and Pradesh">Madhya Pradesh</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Manipur">Manipur</option>
+                <option value="Meghalaya">Meghalaya</option>
+                <option value="Nagaland">Nagaland</option>
+                <option value="odisha">Odisha</option>
+                <option value="Pondicherry">Pondicherry</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Telangana">Telangana</option>
+                <option value="Tripura">Tripura</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="Uttarakhand">Uttarakhand</option>
+                <option value="West Bengal">West Bengal</option>
+            </select>
+
+            <label for="nitrogen">Enter Nitrogen Percentage (%): </label>
+            <input type="number" id="nitrogen" name="nitrogen" min="0" max="140" step="1" required>
+
+            <label for="phosphorous">Enter Phosphorous Percentage (%): </label>
+            <input type="number" id="phosphorous" name="phosphorous" min="0" max="140" step="1" required>
+
+            <label for="potassium">Enter Potassium Percentage (%): </label>
+            <input type="number" id="potassium" name="potassium" min="0" max="140" step="1" required>
+
+
+
+            <label for="phLevel">Soil pH Level:</label>
+            <input type="number" id="phLevel" name="phLevel" min="0" max="140" step="1" required>
+
+            <label for="temperature">Average Temperature (°C):</label>
+            <input type="number" id="temperature" name="temperature" required>
+
+
+            <label for="Humidity">Humidity in %</label>
+            <input type="number" id="Humidity" name="Humidity" min="0" max="140" step="1" required>
+
+
+
+            <input type="submit" value="Submit">
+        </form>
+        {% if prediction %}
+        <div class="container">
+            <h2> Predicted Crop</h2>
+            <h3 class="text-info">{{ prediction }}</h3>
+            
+            <h2> Return Of Investment</h2>
+            <h3 class="text-info">{{ pricePrediction }}</h3>
+        </div>
+        {% endif %}
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
